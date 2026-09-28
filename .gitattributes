@@ -1,0 +1,7 @@
+# No end-of-line conversion, anywhere.
+#
+# RUN.bat must stay CRLF or cmd.exe reads its labels and line continuations
+# wrong. Setting this here means a fresh clone produces exactly the file the
+# release ships, rather than whatever the checking-out machine's git config
+# happens to prefer.
+* -text

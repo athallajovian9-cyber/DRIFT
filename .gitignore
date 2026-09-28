@@ -1,0 +1,22 @@
+# Built artifacts are not source. DRIFT.exe is produced by tools' build step
+# (nuitka) and ships inside the release zip instead of living in git, so the
+# repository stays readable diff-by-diff and does not grow by 7 MB per build.
+DRIFT.exe
+build/
+*.build/
+*.dist/
+*.onefile-build/
+
+# Per-machine state. A reading is only meaningful on the machine that took it,
+# so someone else's history is noise in the repository.
+drift_history.csv
+drift_history.csv.*.old
+_counters.csv
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Release output
+dist/
+*.zip
